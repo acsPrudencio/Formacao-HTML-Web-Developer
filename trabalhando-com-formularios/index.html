@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de cadastro</title>
+</head>
+<body>
+    <form name="signup" method = "POST" action="#" autocomplete="on">
+        Name: <input type="text" name="name" /><br><br>
+        Age: <input type="number" name="age" /><br><br>
+        Password: <input type="password" name="password" /><br><br>
+        <button type="submit" name="button_submit">Submit</button>
+
+    </form>
+    <br>
+    <br>
+    <br>
+    <form>
+        <label>Text:</label><input type="text"/><br><br>
+        <label>Number:</label><input type="number" step="5" min="0" max="100"/><br><br>
+        <label>Range:</label><input type="range"/><br><br>
+        <label>Color:</label><input type="color"/><br><br>
+        <label>Email:</label><input type="email"/><br><br>
+        <label>Date:</label><input type="date"/><br><br>
+        <label>Week:</label><input type="week"/><br><br>
+        <label>Month:</label><input type="month"/><br><br>
+        <label>Checkbox:</label><input type="checkbox"/><br><br>
+        <label>Radio:</label><input type="radio" name="aceita"/><input type="radio" name="aceita"/><br><br>
+        <label>Url:</label><input type="url"/><br><br>
+        <label>File: </label><input type="file" multiple/><br><br>
+        <label>Search: </label><input type="search"/><br><br>
+        <label>Button:</label><input type="button" value="Send"/><br><br>
+
+    </form>
+    <br>
+    <br>
+    <br>
+
+    <form onsubmit="" method="get">
+        <label>Nome: </label><input type="text"/><br><br>
+        <label>Cargo: </label>
+        <select name="role" multiple>
+            <option value="">Selecione o cargo</option>
+            <option value="gerente">Gerente</option>
+            <option value="diretor">Diretor</option>
+            <option value="presidente">Presidente</option>
+        </select><br><br>
+        <label>Mensagem: </label><textarea rows="5" cols="5"></textarea>
+    </form>
+    
+</body>
+</html>
