@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark e Javascript</title>
+</head>
+<body>
+    <input type="text" id="busca"><br>
+
+    <p id="descricao">Mussum Ipsum, cacilds vidis litro abertis. Diuretics paradis num copo é motivis de denguis.Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.Mais vale um bebadis conhecidiss, que um alcoolatra anonimis.</p>
+
+    <script>
+        var searchField = document.getElementById('busca');
+        var descriptionObject = document.getElementById('descricao');
+        var textToSearch = descriptionObject.innerHTML;
+
+
+        function realizarBusca(param){
+            const regex = new RegExp(`(${param})(?!(.(?!<mark))*</mark>)+`, `ig`);
+            const ocurrences = textToSearch.match(regex);
+            descriptionObject.innerHTML = textToSearch.replace(regex, `<mark>${param}</mark>`);
+        }
+        searchField.addEventListener('keyup', (e) => realizarBusca(e.target.value));
+    </script>
+</body>
+</html>
